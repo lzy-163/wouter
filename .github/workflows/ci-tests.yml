@@ -37,4 +37,6 @@ jobs:
         run: bun run lint
 
       - name: Upload Coverage Report to Codecov
-        run: bash <(curl -s https://codecov.io/bash) -t 7a260fc2-03ff-4e98-b0a5-11a2d5c53a29
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
